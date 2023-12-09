@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\BigSpace.otf" />
+    <None Remove="Assets\Fonts\BigSpace.ttf" />
+    <None Remove="Assets\Image\Gradient.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\BigSpace.ttf" />
+    <Resource Include="Assets\Image\Gradient.png" />
+  </ItemGroup>
+
+</Project>

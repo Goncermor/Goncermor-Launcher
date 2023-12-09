@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoncermorLauncher", "Goncermor Launcher\GoncermorLauncher.csproj", "{7AB82212-8E88-4E69-9092-5B3043C933AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Updater", "Updater\Updater.csproj", "{37A54D0B-F343-4B68-9EFC-E411637E827F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AB82212-8E88-4E69-9092-5B3043C933AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB82212-8E88-4E69-9092-5B3043C933AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB82212-8E88-4E69-9092-5B3043C933AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB82212-8E88-4E69-9092-5B3043C933AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37A54D0B-F343-4B68-9EFC-E411637E827F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A54D0B-F343-4B68-9EFC-E411637E827F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A54D0B-F343-4B68-9EFC-E411637E827F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A54D0B-F343-4B68-9EFC-E411637E827F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {706114F7-39F1-485B-90D5-1474BA87BDEE}
+	EndGlobalSection
+EndGlobal
