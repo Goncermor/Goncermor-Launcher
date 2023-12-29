@@ -24,8 +24,18 @@ namespace Goncermor_Launcher
         {
             InitializeComponent();
             IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
-            DWM_WINDOW_CORNER_PREFERENCE Pref = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_DONOTROUND;
+            DWM_WINDOW_CORNER_PREFERENCE Pref = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUNDSMALL;
             WIN32.DWM_API.DwmSetWindowAttribute(hWnd, DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE, ref Pref, sizeof(uint));
+        }
+
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            _ = AsyncTsk();
+        }
+
+        private async Task AsyncTsk() {
+            await Task.Delay(2000);
+
         }
     }
 }
