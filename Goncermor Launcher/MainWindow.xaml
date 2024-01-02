@@ -54,13 +54,14 @@
                         <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
                     <Controls:ServerCard Icon="Memory" ValueName="CPU Usage (%)" Value="100%" />
-                    <Controls:ServerCard Icon="Chip" ValueName="RAM Usage (MB)" Value ="16000MB"  Grid.Row="1"/>
-                    <Controls:ServerCard Icon="Speedometer" ValueName="TPS" Value="20TPS"  Grid.Row="2"/>
-                    <Controls:ServerCard Icon="AccountGroup" ValueName="Players" Value="1/20" Grid.Row="3"/>
+                    <Controls:ServerCard Icon="Chip" ValueName="RAM Usage (MB)" Value ="16000MB" MaxValue="/32000GB" Grid.Row="1"/>
+                    <Controls:ServerCard Icon="Speedometer" ValueName="TPS" Value="20TPS" MaxValue="/20TPS" Grid.Row="2"/>
+                    <Controls:ServerCard Icon="AccountGroup" ValueName="Players" Value="1" MaxValue="/20" Grid.Row="3"/>
 
-                    <Controls:ServerCard Icon="Server" ValueName="Server OS" Value="Debian" Grid.Column="1"/>
-                    <Controls:ServerCard Icon="AccountGroup" ValueName="Players" Value="1/20" Grid.Row="1" Grid.Column="1"/>
-                    <Controls:ServerCard Icon="Harddisk" ValueName="Map Size (GB)" Value="200.26GB" Grid.Row="2" Grid.Column="1"/>
+                    <Controls:ServerCard Icon="Server" ValueName="Server OS" Value="Debian" MaxValue="Buster (12)" Grid.Column="1" />
+                    
+                    
+                    <Controls:ServerCard Icon="Harddisk" ValueName="Map Size (GB)" Value="200.26GB" MaxValue="/500GB" Grid.Row="2" Grid.Column="1"/>
                     <Controls:ServerCard Icon="Restart" ValueName="Status" Value="Idle" Grid.Row="3" Grid.Column="1"/>
 
                     <Controls:ServerCard Icon="Protocol" ValueName="Protocol Version" Value="764" Grid.Column="2"/>

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="260">
+             d:DesignHeight="60" d:DesignWidth="260" >
     <materialDesign:Card Margin="5" Background="#FF090A0A" Foreground="White">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -18,7 +18,14 @@
             <Grid  Background="#FF121212" Grid.Column="1">
                 <TextBlock Text="{Binding ValueName}" FontWeight="Bold" Grid.Column="1" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWithOverflow" Margin="5,0,5,0"/>
             </Grid>
-            <Label Content="{Binding Value}" VerticalContentAlignment="Center" FontSize="22" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="2"/>
+            <Grid Grid.Column="2">
+                <TextBlock x:Name="ValueElement" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Loaded="ValueElement_Loaded" >
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Value}" FontSize="20"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </Grid>
+            
         </Grid>
     </materialDesign:Card>
 </UserControl>

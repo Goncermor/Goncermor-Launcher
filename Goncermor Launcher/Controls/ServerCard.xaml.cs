@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Goncermor_Launcher.Controls
 {
@@ -25,5 +26,18 @@ namespace Goncermor_Launcher.Controls
         public string Icon { get; set; } = "Memory";
         public string ValueName { get; set; } = "Name";
         public string Value { get; set; } = "NaN";
+        public string? MaxValue { get; set; }
+
+        private bool MaxValueSet = false;
+
+        private void ValueElement_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (MaxValue != null && !MaxValueSet)
+            {
+                MaxValueSet = true;
+                ValueElement.Inlines.Add(new LineBreak());
+                ValueElement.Inlines.Add(new Run { Text = $"{MaxValue}", FontSize = 12 });
+            }
+        }
     }
 }
