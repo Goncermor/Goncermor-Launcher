@@ -26,17 +26,17 @@ namespace Goncermor_Launcher.Controls
         public string Icon { get; set; } = "Memory";
         public string ValueName { get; set; } = "Name";
         public string Value { get; set; } = "NaN";
-        public string? MaxValue { get; set; }
+        public string? SecondValue { get; set; }
 
-        private bool MaxValueSet = false;
+        private bool SecondValueSet = false;
 
         private void ValueElement_Loaded(object sender, RoutedEventArgs e)
         {
-            if (MaxValue != null && !MaxValueSet)
+            if (SecondValue != null && !SecondValueSet)
             {
-                MaxValueSet = true;
+                SecondValueSet = true;
                 ValueElement.Inlines.Add(new LineBreak());
-                ValueElement.Inlines.Add(new Run { Text = $"{MaxValue}", FontSize = 12 });
+                ValueElement.Inlines.Add(new Run { Text = $"{SecondValue}", FontSize = 12 });
             }
         }
     }

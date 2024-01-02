@@ -25,6 +25,9 @@
     <Compile Update="Controls\PlayerListItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\ToggleSetting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
