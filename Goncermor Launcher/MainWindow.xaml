@@ -12,7 +12,7 @@
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="40"/>
     </WindowChrome.WindowChrome>
-    <Grid Background="#FF080808">
+    <Grid Background="#FF1E1E1E">
         <Grid Height="40" VerticalAlignment="Top" Background="Black">
             <Label HorizontalAlignment="Left" Content="Goncermor Launcher" FontFamily="{DynamicResource BigSpace}" Foreground="White" Width="206" FontSize="22" FontStyle="Italic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="5,0,0,2"/>
             <Ellipse Margin="771,11,11,11" Stroke="Black" Fill="Red" StrokeThickness="0" Width="18"/>
@@ -28,86 +28,80 @@
             <ProgressBar Margin="758,22,22,22" IsIndeterminate="True" Style="{StaticResource MaterialDesignCircularProgressBar}" />
 
         </Grid>
-        <TabControl Margin="0,40,0,62" HorizontalContentAlignment="Stretch">
+        <TabControl Margin="0,40,0,64" HorizontalContentAlignment="Stretch">
             <TabItem Header="Players" HorizontalContentAlignment="Stretch">
                 <Grid/>
             </TabItem>
             <TabItem Header="Mods">
                 <Grid/>
             </TabItem>
-            <TabItem Header="Mapa">
+            <TabItem Header="Map">
                 <Grid>
-         
+
                 </Grid>
             </TabItem>
             <TabItem Header="Server">
-                <Grid Height="302">
-                    <materialDesign:Card Margin="12,11,551,225" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="Memory" Margin="17,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="CPU" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" HorizontalAlignment="Right" Width="60" Height="24" VerticalAlignment="Top"/>
-                            <Label Content="60%" VerticalContentAlignment="Center" FontSize="22" Foreground="Black" HorizontalContentAlignment="Center" Padding="4,6,6,4" Margin="65,8,60,8" FontWeight="Bold"/>
-                        </Grid>
-                    </materialDesign:Card>
-                    <materialDesign:Card Margin="12,82,551,154" Background="#FF00B3FF">
-                        <Grid>
+                <Grid Margin="10,10,10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="260"/>
+                        <ColumnDefinition Width="260"/>
+                        <ColumnDefinition Width="260"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Controls:ServerCard Icon="Memory" ValueName="CPU Usage (%)" Value="100%" />
+                    <Controls:ServerCard Icon="Chip" ValueName="RAM Usage (MB)" Value ="16000MB"  Grid.Row="1"/>
+                    <Controls:ServerCard Icon="Speedometer" ValueName="TPS" Value="20TPS"  Grid.Row="2"/>
+                    <Controls:ServerCard Icon="AccountGroup" ValueName="Players" Value="1/20" Grid.Row="3"/>
 
-                            <materialDesign:PackIcon Kind="Chip" Margin="17,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="RAM" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" HorizontalAlignment="Right" Width="60" Height="24" VerticalAlignment="Top"/>
-                            <Label Content="416MB" VerticalContentAlignment="Center" FontSize="22" Foreground="Black" HorizontalContentAlignment="Center" Padding="4,6,6,4" Margin="65,8,60,8" FontWeight="Bold"/>
-                        </Grid>
-                    </materialDesign:Card>
-                    <materialDesign:Card Margin="12,153,551,83" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="Speedometer" Margin="17,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="TPS" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60"/>
-                            <Label Content="60TPS" VerticalContentAlignment="Center" FontSize="22" Foreground="Black" HorizontalContentAlignment="Center" Padding="4,6,6,4" Margin="65,8,60,8" FontWeight="Bold"/>
-                        </Grid>
-                    </materialDesign:Card>
-                    <materialDesign:Card Margin="12,224,551,12" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="AccountGroup" Margin="17,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="Players" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60"/>
-                            <Label Content="1/69" VerticalContentAlignment="Center" FontSize="22" Foreground="Black" HorizontalContentAlignment="Center" Padding="4,6,6,4" Margin="65,8,60,8" FontWeight="Bold"/>
-                        </Grid>
-                    </materialDesign:Card>
+                    <Controls:ServerCard Icon="Server" ValueName="Server OS" Value="Debian" Grid.Column="1"/>
+                    <Controls:ServerCard Icon="AccountGroup" ValueName="Players" Value="1/20" Grid.Row="1" Grid.Column="1"/>
+                    <Controls:ServerCard Icon="Harddisk" ValueName="Map Size (GB)" Value="200.26GB" Grid.Row="2" Grid.Column="1"/>
+                    <Controls:ServerCard Icon="Restart" ValueName="Status" Value="Idle" Grid.Row="3" Grid.Column="1"/>
 
-
-
-                    <materialDesign:Card Margin="254,11,334,154" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="Ip" Margin="10,10,0,95" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="Network" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="68"/>
-                        </Grid>
-                    </materialDesign:Card>
-                    <materialDesign:Card  Margin="254,153,334,83" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="Harddisk" Margin="17,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="Map" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60"/>
-                            <Label Content="2.5GB" VerticalContentAlignment="Center" FontSize="22" Foreground="Black" HorizontalContentAlignment="Center" Padding="4,6,6,4" Margin="65,8,35,8" FontWeight="Bold"/>
-                        </Grid>
-                    </materialDesign:Card>
-                    <materialDesign:Card Margin="254,224,334,12" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="Server" Margin="17,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" />
-                            <Label Content="OS" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60"/>
-                            <Label Content="Debian" VerticalContentAlignment="Center" FontSize="22" Foreground="Black" HorizontalContentAlignment="Center" Padding="4,6,6,4" Margin="65,8,65,8" FontWeight="Bold"/>
-                            <materialDesign:PackIcon Kind="Debian" Margin="147,17,0,17" VerticalAlignment="Stretch" Width="32" Height="32" Foreground="#FFFF0046" />
-                        </Grid>
-                    </materialDesign:Card>
-
-
-                    <materialDesign:Card Margin="471,11,12,12" Background="#FF00B3FF">
-                        <Grid>
-                            <materialDesign:PackIcon Kind="Alert" Margin="10,10,0,0" Width="32" Height="32" />
-                            <Label Content="Errors" VerticalContentAlignment="Center" FontSize="14" Foreground="Black" HorizontalContentAlignment="Right" Padding="4,4,6,4" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60"/>
-                        </Grid>
-                    </materialDesign:Card>
+                    <Controls:ServerCard Icon="Protocol" ValueName="Protocol Version" Value="764" Grid.Column="2"/>
+                    <Controls:ServerCard Icon="Lan" ValueName="Port" Value="TCP 25565" Grid.Column="2" Grid.Row="1"/>
+                    <Controls:ServerCard Icon="Text" ValueName="Logs" Value="968" Grid.Column="2" Grid.Row="2"/>
+                    <Controls:ServerCard Icon="Alert" ValueName="Errors" Value="8" Grid.Column="2" Grid.Row="3"/>
 
                 </Grid>
             </TabItem>
             <TabItem Header="Config">
-                <Grid/>
+                <materialDesign:Card Margin="12,12,12,12" Background="#FF0A0A0A">
+                    <ScrollViewer CanContentScroll="False" VerticalScrollBarVisibility="Auto" >
+                        <StackPanel>
+                            <Expander HorizontalAlignment="Stretch" Header="Launcher" Foreground="White" Background="{x:Null}">
+                                <StackPanel Margin="24,8,24,16" Orientation="Vertical" HorizontalAlignment="Left">
+                                    <ToggleButton/>
+                                </StackPanel>
+                            </Expander>
+                            <Border/>
+                            <Expander HorizontalAlignment="Stretch" Header="Performance"  Foreground="White" Background="{x:Null}">
+                                <StackPanel Margin="24,8,24,16" Orientation="Vertical">
+                                    <TextBlock Text="Your Content" />
+                                    <TextBlock/>
+                                </StackPanel>
+                            </Expander>
+                            <Border/>
+                            <Expander HorizontalAlignment="Stretch" Header="Account"  Foreground="White" Background="{x:Null}">
+                                <StackPanel Margin="24,8,24,16" Orientation="Vertical">
+                                    <TextBlock Text="Your Content" />
+                                    <TextBlock/>
+                                </StackPanel>
+                            </Expander>
+                            <Expander HorizontalAlignment="Stretch" Header="Miscellaneous" Foreground="White" Background="{x:Null}">
+                                <StackPanel Margin="24,8,24,16" Orientation="Vertical">
+                                    <TextBlock Text="Your Content" />
+                                    <TextBlock/>
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+                    </ScrollViewer>
+                </materialDesign:Card>
             </TabItem>
         </TabControl>
     </Grid>
