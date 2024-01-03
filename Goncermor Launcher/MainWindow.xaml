@@ -32,7 +32,28 @@
         </Grid>
         <TabControl Margin="0,40,0,64" HorizontalContentAlignment="Stretch">
             <TabItem Header="Players" HorizontalContentAlignment="Stretch">
-                <Grid/>
+                <materialDesign:Card Margin="12,12,12,12" Background="#FF121212">
+                    <ListView>
+                        <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+                            <Controls:PlayerListItem />
+                        </ListViewItem>
+                        <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+                            <Controls:PlayerListItem />
+                        </ListViewItem>
+                        <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+                            <Controls:PlayerListItem />
+                        </ListViewItem>
+                        <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+                            <Controls:PlayerListItem />
+                        </ListViewItem>
+                        <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+                            <Controls:PlayerListItem />
+                        </ListViewItem>
+                        <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+     <Controls:PlayerListItem />
+ </ListViewItem>
+                    </ListView>
+                </materialDesign:Card>
             </TabItem>
             <TabItem Header="Mods">
                 <Grid/>
