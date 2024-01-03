@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="260" >
+             d:DesignHeight="70" d:DesignWidth="260" >
     <materialDesign:Card Margin="5" Background="#FF090A0A" Foreground="White">
         <Grid>
             <Grid.ColumnDefinitions>

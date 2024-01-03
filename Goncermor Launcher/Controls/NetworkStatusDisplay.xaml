@@ -4,12 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Goncermor_Launcher.Controls"
-             mc:Ignorable="d" Height="20" Width="30">
+             mc:Ignorable="d" d:DesignHeight="15" d:DesignWidth="25">
     <Grid>
-        <Rectangle Margin="1,15,24,0" StrokeThickness="0"  Fill="#FF1FFF00" Height="5"/>
-        <Rectangle Margin="9,10,16,0" StrokeThickness="0"  Fill="#FF1FFF00" Height="10"/>
-        <Rectangle Margin="17,5,8,0" StrokeThickness="0"  Fill="#FF1FFF00" Height="15"/>
-        <Rectangle Margin="25,0,0,0" StrokeThickness="0"  Fill="#FF1FFF00"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle StrokeThickness="0"  Fill="#FF1FFF00" Margin="1,0,1,0" Height="3" VerticalAlignment="Bottom"/>
+        <Rectangle StrokeThickness="0"  Fill="#FF1FFF00" Grid.Column="1" Margin="1,0,1,0" Height="6" VerticalAlignment="Bottom" />
+        <Rectangle StrokeThickness="0"  Fill="#FF1FFF00" Grid.Column="2" Margin="1,0,1,0" Height="9" VerticalAlignment="Bottom" />
+        <Rectangle StrokeThickness="0"  Fill="#FF1FFF00" Grid.Column="3" Margin="1,0,1,0" Height="12" VerticalAlignment="Bottom" />
+        <Rectangle StrokeThickness="0"  Fill="#FF1FFF00" Grid.Column="4" Margin="1,0,1,0" Height="15" VerticalAlignment="Bottom"/>
+
 
 
 

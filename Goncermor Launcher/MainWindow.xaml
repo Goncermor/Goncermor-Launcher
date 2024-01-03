@@ -22,6 +22,7 @@
                     <BlurEffect/>
                 </Ellipse.Effect>
             </Ellipse>
+            <Controls:NetworkStatusDisplay HorizontalAlignment="Left" Margin="727,0,0,0" VerticalAlignment="Center"/>
         </Grid>
         <Grid Background="Black" Height="64" VerticalAlignment="Bottom">
             <Image HorizontalAlignment="Left" Width="40" Margin="12,12,0,12" Source="https://mineskin.eu/avatar/Goncermor/40"/>
@@ -67,7 +68,7 @@
                     <Controls:ServerCard Icon="Lan" ValueName="Port" Value="TCP 25565" Grid.Column="2" Grid.Row="1"/>
                     <Controls:ServerCard Icon="Text" ValueName="Logs" Value="968" Grid.Column="2" Grid.Row="2"/>
                     <Controls:ServerCard Icon="Alert" ValueName="Errors" Value="8" Grid.Column="2" Grid.Row="3"/>
-                    
+
                     <Label Grid.Column="1" Content="Nothing more to show here ¯\__(ツ)__/¯" Margin="25,24,25,24" Grid.Row="1"/>
                 </Grid>
             </TabItem>
@@ -79,7 +80,7 @@
                                 <StackPanel Margin="24,8,24,16" Orientation="Vertical" HorizontalAlignment="Left" >
                                     <Controls:ToggleSetting ValueName="Use rounded corners" Value="True"/>
                                     <Controls:ToggleSetting ValueName="Use x86 Architecture (Can reduce performance)" Value="False" Margin="0,15,0,0"/>
-                         
+
                                 </StackPanel>
                             </Expander>
                             <Border/>
