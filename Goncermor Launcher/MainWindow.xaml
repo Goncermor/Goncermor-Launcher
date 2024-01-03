@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Goncermor_Launcher"
+        xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:Controls="clr-namespace:Goncermor_Launcher.Controls" x:Class="Goncermor_Launcher.MainWindow"
         mc:Ignorable="d"
         FontFamily="Montserrat"
@@ -36,9 +37,9 @@
                 <Grid/>
             </TabItem>
             <TabItem Header="Map">
-                <Grid>
+                <cef:ChromiumWebBrowser x:Name="Browser" Address="https://earthmc.net/map/aurora/" >
 
-                </Grid>
+                </cef:ChromiumWebBrowser>
             </TabItem>
             <TabItem Header="Server">
                 <Grid Margin="10,10,10,10">
@@ -59,8 +60,6 @@
                     <Controls:ServerCard Icon="AccountGroup" ValueName="Players" Value="1" SecondValue="/20" Grid.Row="3"/>
 
                     <Controls:ServerCard Icon="Server" ValueName="Server OS" Value="Debian" SecondValue="12.04" Grid.Column="1" />
-
-
                     <Controls:ServerCard Icon="Harddisk" ValueName="Map Size (GB)" Value="200.26GB" SecondValue="/500GB" Grid.Row="2" Grid.Column="1"/>
                     <Controls:ServerCard Icon="Restart" ValueName="Status" Value="Idle" Grid.Row="3" Grid.Column="1"/>
 
@@ -68,8 +67,8 @@
                     <Controls:ServerCard Icon="Lan" ValueName="Port" Value="TCP 25565" Grid.Column="2" Grid.Row="1"/>
                     <Controls:ServerCard Icon="Text" ValueName="Logs" Value="968" Grid.Column="2" Grid.Row="2"/>
                     <Controls:ServerCard Icon="Alert" ValueName="Errors" Value="8" Grid.Column="2" Grid.Row="3"/>
+                    
                     <Label Grid.Column="1" Content="Nothing more to show here ¯\__(ツ)__/¯" Margin="25,24,25,24" Grid.Row="1"/>
-
                 </Grid>
             </TabItem>
             <TabItem Header="Config">
@@ -79,7 +78,7 @@
                             <Expander HorizontalAlignment="Stretch" Header="Launcher" Foreground="White" Background="{x:Null}">
                                 <StackPanel Margin="24,8,24,16" Orientation="Vertical" HorizontalAlignment="Left" >
                                     <Controls:ToggleSetting ValueName="Use rounded corners" Value="True"/>
-                                    <Controls:ToggleSetting ValueName="Use x86 Architecture" Value="False" Margin="0,15,0,0"/>
+                                    <Controls:ToggleSetting ValueName="Use x86 Architecture (Can reduce performance)" Value="False" Margin="0,15,0,0"/>
                          
                                 </StackPanel>
                             </Expander>
