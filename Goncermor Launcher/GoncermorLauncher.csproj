@@ -25,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Controls\ModListItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\PlayerListItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
