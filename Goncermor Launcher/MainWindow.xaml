@@ -28,6 +28,7 @@
             <Image HorizontalAlignment="Left" Width="40" Margin="12,12,0,12" Source="https://mineskin.eu/avatar/Goncermor/40"/>
             <Label Content="Goncermor" HorizontalAlignment="Left" Margin="65,9,0,31" Padding="0,0,0,0" Width="160" FontSize="16"/>
             <ProgressBar Margin="758,22,22,22" IsIndeterminate="True" Style="{StaticResource MaterialDesignCircularProgressBar}" />
+            <Button Content="Button" HorizontalAlignment="Left" Margin="603,0,0,0" VerticalAlignment="Center" Click="Button_Click"/>
 
         </Grid>
         <TabControl Margin="0,40,0,64" HorizontalContentAlignment="Stretch">
@@ -50,8 +51,8 @@
                             <Controls:PlayerListItem />
                         </ListViewItem>
                         <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
-     <Controls:PlayerListItem />
- </ListViewItem>
+                            <Controls:PlayerListItem />
+                        </ListViewItem>
                     </ListView>
                 </materialDesign:Card>
             </TabItem>

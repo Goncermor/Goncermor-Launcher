@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Goncermor_Launcher.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -26,6 +27,7 @@ namespace Goncermor_Launcher
             IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
             DWM_WINDOW_CORNER_PREFERENCE Pref = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUNDSMALL;
             WIN32.DWM_API.DwmSetWindowAttribute(hWnd, DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE, ref Pref, sizeof(uint));
+
         }
 
         private void Window_ContentRendered(object sender, EventArgs e)
@@ -36,6 +38,11 @@ namespace Goncermor_Launcher
         private async Task AsyncTsk() {
             await Task.Delay(2000);
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _ = Minecraft.Launch();
         }
     }
 }

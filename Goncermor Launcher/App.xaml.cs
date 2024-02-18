@@ -13,5 +13,10 @@ namespace Goncermor_Launcher
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            System.Net.ServicePointManager.DefaultConnectionLimit = 256;
+            WIN32.KERNEL32.AllocConsole();
+        }
     }
 }
